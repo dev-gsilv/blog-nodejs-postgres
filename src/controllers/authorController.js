@@ -1,10 +1,10 @@
-//import bcrypt from "bcrypt";
+import bcrypt from "bcrypt";
 import {createAuthor, getAll, getById, updateAuthor, deleteAuthor} from "../repositories/authorRepository"
 
 export const create = async (req, res) => {
     try {
-        //const hashPassword = await bcrypt.hash(req.body.password, 10);
-        //req.body.password = hashPassword;
+        const hashPassword = await bcrypt.hash(req.body.password, 10);
+        req.body.password = hashPassword;
         const author = await createAuthor(req.body);
         res.status(200).send(author);
     } catch (e) {

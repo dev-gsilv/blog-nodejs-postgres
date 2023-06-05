@@ -26,8 +26,8 @@ model Post {
   title            String
   subtitle         String
   content          String
-  publication_time DateTime
-  updated          DateTime
+  publication_time DateTime @default(now())
+  updated          DateTime @updatedAt
   author           Author   @relation(fields: [authorId], references: [id])
   authorId         Int
   comments    Comments[]
@@ -38,7 +38,7 @@ model Comments {
   email            String
   name             String
   content          String
-  publication_time DateTime
+  publication_time DateTime @default(now())
   post             Post    @relation(fields: [postId], references: [id])
   postId           Int
 }
