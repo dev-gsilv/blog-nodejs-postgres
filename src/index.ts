@@ -13,7 +13,7 @@ app.get('/health', (req, res) => {
 
 routes(app);
 
-const PORT = 3000;
+const PORT = 8080;
 app.listen(PORT, () =>
   console.log('REST API server is running on port '+PORT),
 )
