@@ -7,9 +7,13 @@ const app = express()
 
 app.use(express.json())
 
+app.get('/health', (req, res) => {
+  res.send('Health check: PASS!')
+})
+
 routes(app);
 
-const port = 3000;
-app.listen(port, () =>
-  console.log('REST API server ready at port: '+port),
+const PORT = 3000;
+app.listen(PORT, () =>
+  console.log('REST API server is running on port '+PORT),
 )
