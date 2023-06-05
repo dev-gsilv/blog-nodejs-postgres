@@ -1,7 +1,7 @@
 import {prisma} from "../services/prisma";
 
 export const createComment = async (data) => {
-    const comment = await prisma.comment.create({
+    const comment = await prisma.comments.create({
         data, 
         select: {
             id: true,
@@ -16,7 +16,7 @@ export const createComment = async (data) => {
 };
 
 export const getAll = async () => {
-    const comments = await prisma.comment.findMany({
+    const comments = await prisma.comments.findMany({
         select: {
             id: true,
             email: true,
@@ -30,7 +30,7 @@ export const getAll = async () => {
 };
 
 export const getById = async (id) => {
-    const comment = await prisma.comment.findUnique({
+    const comment = await prisma.comments.findUnique({
             where: {
                 id
             },
@@ -47,7 +47,7 @@ export const getById = async (id) => {
 };
 
 export const updateComment = async (id, data) => {
-    const comment = await prisma.comment.update({
+    const comment = await prisma.comments.update({
         where: {
             id
         },
@@ -65,7 +65,7 @@ export const updateComment = async (id, data) => {
 };
 
 export const deleteComment = async (id) => {
-    await prisma.comment.delete({
+    await prisma.comments.delete({
         where: {
             id
         }
