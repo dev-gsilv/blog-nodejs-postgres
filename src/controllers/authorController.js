@@ -1,5 +1,5 @@
 //import bcrypt from "bcrypt";
-import {createAuthor, getAll, getById, updateAuthor, deleteAuthor} from "../repositories/author.repository";
+import {createAuthor, getAll, getById, updateAuthor, deleteAuthor} from "../repositories/authorRepository"
 
 export const create = async (req, res) => {
     try {
