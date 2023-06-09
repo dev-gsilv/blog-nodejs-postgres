@@ -1,4 +1,4 @@
-import { create, get, getId, update, remove } from "../controllers/authorController";
+import { create, get, getId, update, remove } from "../controllers/authorController.js";
 
 const authorRoutes = (app) => {
     app.post("/author", create);

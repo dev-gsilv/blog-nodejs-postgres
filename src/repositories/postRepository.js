@@ -1,4 +1,4 @@
-import {prisma} from "../services/prisma";
+import {prisma} from "../services/prisma.js";
 
 export const createPost = async (data) => {
     const post = await prisma.post.create({

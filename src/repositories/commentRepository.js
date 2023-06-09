@@ -1,4 +1,4 @@
-import {prisma} from "../services/prisma";
+import {prisma} from "../services/prisma.js";
 
 export const createComment = async (data) => {
     const comment = await prisma.comments.create({

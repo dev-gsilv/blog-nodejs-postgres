@@ -1,4 +1,4 @@
-import {createPost, getAll, getById, updatePost, deletePost} from "../repositories/postRepository";
+import {createPost, getAll, getById, updatePost, deletePost} from "../repositories/postRepository.js";
 
 export const create = async (req, res) => {
     try {

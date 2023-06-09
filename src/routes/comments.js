@@ -1,4 +1,4 @@
-import { create, get, getId, update, remove } from "../controllers/commentController";
+import { create, get, getId, update, remove } from "../controllers/commentController.js";
 
 const commentRoutes = (app) => {
     app.post("/comment", create);

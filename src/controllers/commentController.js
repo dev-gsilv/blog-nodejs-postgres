@@ -1,4 +1,4 @@
-import {createComment, getAll, getById, updateComment, deleteComment} from "../repositories/commentRepository";
+import {createComment, getAll, getById, updateComment, deleteComment} from "../repositories/commentRepository.js";
 
 export const create = async (req, res) => {
     try {
